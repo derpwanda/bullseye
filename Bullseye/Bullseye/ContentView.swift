@@ -10,7 +10,12 @@ import SwiftUI
 struct ContentView: View {
   var body: some View {
     VStack {
-      Text("🎯🎯🎯 PLACE THE BULLSEYE AS CLOSE AS YOU CAN TO ")
+      Text("🎯🎯🎯\nPLACE THE BULLSEYE AS CLOSE AS YOU CAN TO ")
+        .bold().kerning(2.0)
+        .multilineTextAlignment(.center)
+        .lineSpacing(4.0)
+        .font(.footnote)
+
       Text("89")
       HStack {
         Text("1")
@@ -28,6 +33,7 @@ struct ContentView_Previews: PreviewProvider {
   static var previews: some View {
     Group {
       ContentView()
+        
       ContentView().previewLayout(.fixed(width: 896, height: 414))
     }
   }
